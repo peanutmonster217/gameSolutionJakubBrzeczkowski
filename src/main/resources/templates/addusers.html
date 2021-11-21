@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1 th:text="${name}"/>
+<p th:text="'Hello, ' + ${name} + '!'" />
+<form action="#" th:action="@{/saveusers}" th:object="${person}" method="GET">
+  <label for="name">Name</label>
+  <input type="text" th:field="*{name}" name="name" placeholder="Name"/>
+  <input type="submit" value="Add User">
+</form>
+</body>
+</html>
